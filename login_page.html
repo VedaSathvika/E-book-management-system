@@ -1,0 +1,37 @@
+<html>
+<head>
+<h1 align="center">LOG IN</h1>
+<style>
+	body{background-color: lightgreen;text-align:center;}
+</style>
+</head>
+<body>
+<script>
+function validateform(){
+var name=document.getElementById("name").value;
+var password=document.getElementById("password").value;
+
+if(name==null || name==""){
+	alert("Name can't be blank.");
+	return false;
+}
+else if(password.length<6){
+	alert("Password must be atleast 6 characters long.");
+	return false;
+}
+else{
+	return true;
+}
+}
+</script>
+<form action="catalogue.html" onsubmit="return validateform()">
+<label>User Name</label>
+<input type="text" name="name" id="name">
+<br></br>
+<label>Password</label>
+<input type="password" name="password" id="password">
+<br></br>
+<input type="submit" value="Login" style="color:black;background-color:cyan;">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<body>
+<script type=""text/javascript">
+function signup(){
+	var username = document.getElementById("uname").value;
+	var p1 = document.getElementById("password1").value;
+	var p2 = document.getElementById("password2").value;
+	if((username==null) || (username=="")){
+		alert("Username cannot be blank");
+		return false;
+	}
+	if((p1 == null) || (p1 == "") || (p2 == null) || (p2 == "")){
+		alert("Enter Password");
+		return false;
+	}
+	if(p1==p2){
+		return true;
+	}
+	else{
+		alert("Both the passwords should be same.");
+		return false;
+	}
+}
+</script>
+
+<form action="login_page.html" onsubmit = "return signup()">
+Username: <input id = "uname" placeholder="Username" type="text" /></br>
+Password: <input id = "password1" placeholder = "Password" type="password" /></br>
+Re-enter Password:<input id="password2" placeholder = "Re-enter Password" type="password" /></br>
+<button type="submit">Submit</button>
+</form>
+</body>
+</html>
